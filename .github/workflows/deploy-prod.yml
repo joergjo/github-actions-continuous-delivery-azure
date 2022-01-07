@@ -65,6 +65,7 @@ jobs:
         with:
           login-server: ${{env.IMAGE_REGISTRY_URL}}
           username: ${{ github.actor }}
+          # Must use a PAT here
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
       - name: Deploy web app container
